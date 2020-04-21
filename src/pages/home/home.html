@@ -5,10 +5,15 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <p>STATUS: {{status}}</p>
+  <h1>Jumio Mobile SDK</h1>
+  <button ion-button id="initNetverify" type="button">Init Netverify</button>
+  <button ion-button id="startNetverify" type="button">Start Netverify</button>
+  <button ion-button id="initAuthentication" type="button">Init Authentication</button>
+  <button ion-button id="startAuthentication" type="button">Start Authentication</button>
+  <button ion-button id="startBAM" type="button">Start BAM Checkout</button>
+  <button ion-button id="startDocumentVerification" type="button">Start Document Verification</button>
+  <p id="logtitle" style="visibility: hidden">Log: </p>
+  <p id="log"></p>
 </ion-content>
