@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,Platform } from 'ionic-angular';
 declare var Jumio: any;
 
 @Component({
@@ -9,8 +9,10 @@ declare var Jumio: any;
 export class HomePage {
   status: String = "";
 
-  constructor(public navCtrl: NavController) {
-    console.log(Jumio);
+  constructor(public navCtrl: NavController, platform: Platform) {
+    platform.ready().then(() => {
+      Jumio = (<any>window).plugins.Jumio;
+    })
   }
 
   ionViewDidLoad() {
